@@ -2,6 +2,7 @@ package hei.examen.person;
 
 import java.time.Instant;
 
+import hei.examen.HistoriqueNote;
 import lombok.Getter;
 
 @Getter
@@ -14,4 +15,12 @@ public class Etudiant extends Person {
         this.groupe = groupe;
         this.tuteur = tuteur;
     }
+
+    public void setNote(Instant date ,double note) {
+        HistoriqueNote.getInstance().setNote(this.getId(), date, note);
+    }
+    public double getNote(Instant date) {
+        return HistoriqueNote.getInstance().getnote(this.getId(), date);
+    }
+
 }
