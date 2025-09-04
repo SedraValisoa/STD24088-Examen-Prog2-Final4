@@ -4,7 +4,6 @@ import java.time.Instant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
 @AllArgsConstructor
 @Getter
 public class Person {
@@ -15,4 +14,5 @@ public class Person {
     private Instant dateNaissance;
     private String tel;
     private String email;
+  
 }
